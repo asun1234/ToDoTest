@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
+
 import { withTracker } from 'meteor/react-meteor-data';
 
 import { Tasks } from '../api/tasks.js';
 
 import Task from './Task.js';
+import Button from '@material-ui/core/Button';
+
 
 // App component - represents the whole app
 export default class App extends Component {
@@ -14,6 +17,14 @@ export default class App extends Component {
       { _id: 2, text: 'This is task 2' },
       { _id: 3, text: 'This is task 3' },
     ];
+  }
+
+  buttonApp(){
+    return (
+      <Button variant="contained" color="primary">
+        Hello World
+      </Button>
+    );
   }
 
   renderTasks() {
@@ -28,11 +39,12 @@ export default class App extends Component {
         <header>
           <h1>To-Do List</h1>
         </header>
-
+        <div id="app"></div>
         <ul>
           {this.renderTasks()}
         </ul>
       </div>
+
     );
   }
 }
