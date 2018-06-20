@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import ReactDOM from 'react-dom';
+=======
+
+
+>>>>>>> 73afa1b4760f30c583dd0d2f77c722ed1ff2a7df
 import { withTracker } from 'meteor/react-meteor-data';
 
 import { Tasks } from '../api/tasks.js';
 
 import Task from './Task.js';
+import Button from '@material-ui/core/Button';
+
 
 // App component - represents the whole app
 class App extends Component {
@@ -37,6 +44,14 @@ class App extends Component {
       });
     }
 
+  buttonApp(){
+    return (
+      <Button variant="contained" color="primary">
+        Hello World
+      </Button>
+    );
+  }
+
   renderTasks() {
     return this.props.tasks.map((task) => (
       <Task key={task._id} task={task} />
@@ -67,11 +82,12 @@ class App extends Component {
             />
           </form>
         </header>
-
+        <div id="app"></div>
         <ul>
           {this.renderTasks()}
         </ul>
       </div>
+
     );
   }
 }
