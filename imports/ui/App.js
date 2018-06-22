@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
+
 import ReactDOM from 'react-dom';
-=======
-
-
->>>>>>> 73afa1b4760f30c583dd0d2f77c722ed1ff2a7df
 import { withTracker } from 'meteor/react-meteor-data';
 
 import { Tasks } from '../api/tasks.js';
@@ -37,7 +33,7 @@ class App extends Component {
     // Clear form
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
   }
-  
+
   toggleHideCompleted() {
       this.setState({
         hideCompleted: !this.state.hideCompleted,
